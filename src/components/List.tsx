@@ -5,7 +5,7 @@ import { FaPlus, FaRegComment } from 'react-icons/fa';
 import { MdQuestionMark } from 'react-icons/md';
 
 type Topic = {
-  id: number;
+  topic_id: number;
   title: string;
   views_count: number;
   comments_count: number;
@@ -29,7 +29,7 @@ const List = ({ name, topics }: ListProps) => {
       <div className="grid w-full grid-cols-1 gap-x-4 xl:grid-cols-2">
         {topics.map((topic) => {
           return (
-            <Link href={`/${topic.id}`} key={topic.id}>
+            <Link href={`/${topic.topic_id}`} key={topic.topic_id}>
               <div className="my-3 w-full rounded-xl border border-gray-400 p-4">
                 <div className="flex gap-2 font-semibold">
                   <div className="flex gap-3">
